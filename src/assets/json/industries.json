@@ -1,0 +1,81 @@
+{
+    "industries": [
+    {
+        "id": 1,
+        "name": "Basic Materials"
+        
+    },
+    {
+        "id": 2,
+        "name": "Communication Services"
+        
+    },
+    {
+        "id": 3,
+        "name": "Consumer Cyclical"
+        
+    },
+    {
+        "id": 4,
+        "name": "Consumer Defensive"
+        
+    },
+    {
+        "id": 5,
+        "name": "Consumer Goods"
+        
+    },
+    {
+        "id": 6,
+        "name": "Energy"
+        
+    },
+
+    {
+        "id": 7,
+        "name": "Financial"
+        
+    },
+    {
+        "id": 8,
+        "name": "Financial Services"
+        
+    },
+    {
+        "id": 9,
+        "name": "Healthcare"
+        
+    },
+
+    {
+        "id": 10,
+        "name": "Industrial Goods"
+        
+    },
+    {
+        "id": 11,
+        "name": "Industrials"
+        
+    },
+    {
+        "id": 12,
+        "name": "Real Estate"
+        
+    },
+    {
+        "id": 13,
+        "name": "Services"
+        
+    },
+    {
+        "id": 14,
+        "name": "Technology"
+        
+    },
+    {
+        "id": 15,
+        "name": "Utilities"
+        
+    }    
+]
+}

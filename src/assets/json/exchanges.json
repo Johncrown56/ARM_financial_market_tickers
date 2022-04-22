@@ -1,0 +1,104 @@
+{
+    "exchanges": [
+        {
+            "id": 1,
+            "name": "New York Stock Exchange",
+            "code": "NYSE"
+        },
+        {
+            "id": 2,
+            "name": "NASDAQ Stock Exchange ",
+            "code": "NASDAQ"
+        },
+        {
+            "id": 3,
+            "name": "NYSE Index",
+            "code": "INDEXNYSE"
+        },
+        {
+            "id": 4,
+            "name": "S&P Index",
+            "code": "INDEXSP"
+        },
+        {
+            "id": 5,
+            "name": "NYSE American",
+            "code": "NYSEAMERICAN"
+        },
+        {
+            "id": 6,
+            "name": "NYSE Arca",
+            "code": "NYSEARCA"
+        },
+        {
+            "id": 7,
+            "name": "CBOE BZX",
+            "code": "BATS"
+        },
+        {
+            "id": 8,
+            "name": "Dow Jones Index",
+            "code": "DJI"
+        },
+        {
+            "id": 9,
+            "name": "Over-the-counter Markets",
+            "code": "OTC"
+        },
+        {
+            "id": 10,
+            "name": "CBOE Index",
+            "code": "INDEXCBOE"
+        },
+        {
+            "id": 11,
+            "name": "Nasdaq Index",
+            "code": "INDEXNASDAQ"
+        },
+        {
+            "id": 12,
+            "name": "Toronto Stock Exchange",
+            "code": "TSX"
+        },
+        {
+            "id": 13,
+            "name": "Toronto Index",
+            "code": "INDEXTSI"
+        },
+        {
+            "id": 14,
+            "name": "Canadian Securities Exchange",
+            "code": "CSE"
+        },
+        {
+            "id": 15,
+            "name": "TSX Venture Exchange",
+            "code": "TSXV"
+        },
+        {
+            "id": 16,
+            "name": "NEO Exchange",
+            "code": "NEO"
+        },
+        {
+            "id": 17,
+            "name": "London Stock Exchange",
+            "code": "LSE"
+        },
+        {
+            "id": 18,
+            "name": "FTSE Index ",
+            "code": "INDEXFTSE"
+        },
+        {
+            "id": 19,
+            "name": "Hong Kong Stock Exchange",
+            "code": "HKEX"
+        },
+        {
+            "id": 19,
+            "name": "National Stock Exchange of India",
+            "code": "NSE"
+        }        
+    ]
+}

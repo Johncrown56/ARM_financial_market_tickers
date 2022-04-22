@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col-sm-5">
+      <img class="card-img" src="{{image_url}}" alt="Image Description">
+    </div>
+    <!-- End Col -->
+
+    <div class="col-sm-7">
+      <!-- Card Body -->
+      <div class="card-body pt-0">
+        <div class="mb-2">
+          <a class="card-link" href="javascript:;">{{industry}}</a>
+        </div>
+
+        <h3 class="card-title">
+          <a class="text-dark" href="{{url}}">{{title}}</a>
+        </h3>
+        
+        <p class="card-text">{{snippet}}</p>
+
+        <a class="btn btn-primary btn-transition" href="{{url}}">Read article <fa-icon [icon]="faAngleRight"></fa-icon></a>
+
+        
+        
+        <!-- Card Footer -->
+        <!-- <div class="card-footer">
+          <div class="d-flex">
+            <div class="flex-shrink-0">
+              <a class="avatar avatar-circle" href="">
+                <img class="avatar-img" src="./assets/img/160x160/img3.jpg" alt="Image Description">
+              </a>              
+            </div>
+          
+            <div class="flex-grow-1 ms-3">
+              <a class="card-link link-dark" href="">Aaron Bezos</a>
+              <p class="card-text small">{{published_at | date:'mediumDate' }}</p>
+            </div>
+          </div>
+        </div> -->
+        <!-- End Card Footer -->
+      </div>
+      <!-- End Card Body -->
+    </div>
+    <!-- End Col -->
+  </div>
+  <!-- End Row -->

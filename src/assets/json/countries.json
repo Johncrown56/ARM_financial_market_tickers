@@ -1,0 +1,195 @@
+{
+    "countries": [
+        {
+            "id": 1,
+            "country": "Argentina",
+            "code": "ar"
+        },
+        {
+            "id": 2,
+            "country": "Australia",
+            "code": "au"
+        },
+        {
+            "id": 3,
+            "country": "Belgium",
+            "code": "be"
+        },
+        {
+            "id": 4,
+            "country": "Brazil",
+            "code": "br"
+        },
+        {
+            "id": 5,
+            "country": "Canada",
+            "code": "ca"
+        },
+        {
+            "id": 6,
+            "country": "Switzerland",
+            "code": "ch"
+        },
+        {
+            "id": 7,
+            "country": "Chile",
+            "code": "cl"
+        },
+        {
+            "id": 8,
+            "country": "China",
+            "code": "cn"
+        },
+        {
+            "id": 9,
+            "country": "Czech Republic",
+            "code": "cz"
+        },
+        {
+            "id": 10,
+            "country": "Germany",
+            "code": "de"
+        },
+
+        {
+            "id": 11,
+            "country": "Denmark",
+            "code": "dk"
+        },
+        {
+            "id": 12,
+            "country": "Estonia",
+            "code": "ee"
+        },
+        {
+            "id": 13,
+            "country": "Egypt",
+            "code": "eg"
+        },
+        {
+            "id": 14,
+            "country": "Spain",
+            "code": "es"
+        },
+        {
+            "id": 15,
+            "country": "South Africa",
+            "code": "za"
+        },
+        {
+            "id": 16,
+            "country": "European Union",
+            "code": "eu"
+        },
+        {
+            "id": 17,
+            "country": "Finland",
+            "code": "fi"
+        },
+        {
+            "id": 18,
+            "country": "France",
+            "code": "fr"
+        },
+        {
+            "id": 19,
+            "country": "United Kingdom",
+            "code": "gb"
+        },
+        {
+            "id": 20,
+            "country": "Global",
+            "code": "global"
+        },
+        {
+            "id": 21,
+            "country": "Greece",
+            "code": "gr"
+        },
+        {
+            "id":22,
+            "country": "Hong Kong",
+            "code": "hk"
+        },
+        {
+            "id": 23,
+            "country": "Hungary",
+            "code": "hu"
+        },
+        {
+            "id": 24,
+            "country": "Indonesia",
+            "code": "id"
+        },
+        {
+            "id": 25,
+            "country": "Ireland",
+            "code": "ie"
+        },
+        {
+            "id": 26,
+            "country": "Israel",
+            "code": "il"
+        },
+        {
+            "id": 27,
+            "country": "India",
+            "code": "in"
+        },
+        {
+            "id": 28,
+            "country": "Iceland",
+            "code": "is"
+        },
+        {
+            "id": 29,
+            "country": "Italy",
+            "code": "it"
+        },
+        {
+            "id": 30,
+            "country": "Japan",
+            "code": "jp"
+        },
+        {
+            "id": 31,
+            "country": "Korea",
+            "code": "kr"
+        },
+        {
+            "id": 32,
+            "country": "Sri Lanka",
+            "code": "lk"
+        },
+        {
+            "id": 33,
+            "country": "Lithuania",
+            "code": "lt"
+        },
+        {
+            "id": 34,
+            "country": "Latvia ",
+            "code": "lv"
+        },
+        {
+            "id": 35,
+            "country": "Mexico",
+            "code": "mx"
+        },
+        {
+            "id": 36,
+            "country": "Malaysia",
+            "code": "my"
+        },
+        {
+            "id": 37,
+            "country": "Netherlands",
+            "code": "nl"
+        },
+        {
+            "id": 37,
+            "country": "United States",
+            "code": "us"
+        }
+    ]
+}

@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  marketaux:{
+    baseUrl: "https://api.marketaux.com/v1/",
+    apiToken: "HVgHgfiSyVJ5rPOMw5Wuev6WiHD3TyffAQEHv8ss"
+  }
+  
 };
 
 /*

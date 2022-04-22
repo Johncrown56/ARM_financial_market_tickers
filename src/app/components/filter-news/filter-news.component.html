@@ -1,0 +1,241 @@
+<!-- Card Grid -->
+<div class="container content-space-t-1 content-space-t-md-2 content-space-b-2 content-space-b-lg-3">
+  <div class="row">
+    <div class="col-lg-3 order-lg-2">
+      <!-- Navbar -->
+      <div class="navbar-expand-lg mb-5">
+        <!-- Navbar Toggle -->
+        <div class="d-grid">
+          <button type="button" class="navbar-toggler btn btn-white mb-3" data-bs-toggle="collapse"
+            data-bs-target="#navbarVerticalNavMenu" aria-label="Toggle navigation" aria-expanded="false"
+            aria-controls="navbarVerticalNavMenu">
+            <span class="d-flex justify-content-between align-items-center">
+              <span class="text-dark">Filter</span>
+
+              <span class="navbar-toggler-default">
+                <i class="bi-list"></i>
+              </span>
+
+              <span class="navbar-toggler-toggled">
+                <i class="bi-x"></i>
+              </span>
+            </span>
+          </button>
+        </div>
+        <!-- End Navbar Toggle -->
+
+        <!-- Navbar Collapse -->
+        <div id="navbarVerticalNavMenu" class="collapse navbar-collapse">
+          <div class="w-100">
+            <!-- Form -->
+            <form [formGroup]="form" (ngSubmit)="onsubmit()">
+
+              <div class="mb-5">
+                <h5 class="mb-3">Select Duration</h5>
+
+                <!-- Select -->
+                <select class="form-select form-select-sm" formControlName="duration">
+                  <option value="{{today}}" selected>Today</option>
+                  <option value="{{yesterday}}">Yesterday</option>
+                  <option value="{{lastWeek}}">Last week</option>
+                  <option value="{{lastMonth}}">Last month</option>
+                  <option value="{{lastThreeMonths}}">Last 3 months</option>
+                  <option value="{{lastSixMonths}}">Last 6 months</option>
+                </select>
+                <!-- End Select -->
+              </div>
+
+              <div class="mb-5">
+                <h5 class="mb-3">Countries</h5>
+
+                <div class="d-grid gap-2">
+                  <!-- Checkboxes -->
+                  <div class="form-check" *ngFor="let c of countries; let i=index">
+                    <input class="form-check-input" type="checkbox" value="{{c.code}}" formArrayName="selectedCountries" id="country{{c.id}}"
+                    (change)="onCountryChange($event)"> 
+                    <label class="form-check-label d-flex" for="country{{c.id}}">{{c.country}}</label>
+                  </div>
+                  <!-- End Checkboxes -->
+
+                </div>
+              </div>
+
+              <div class="mb-5">
+                <h5 class="mb-3">Industries</h5>
+
+                <div class="d-grid gap-2">
+                  <!-- Checkboxes -->
+                  <div class="form-check" *ngFor="let val of industries; let i=index">
+                    <input class="form-check-input" type="checkbox" value="{{val.name}}" formArrayName="selectedIndustries" id="industry{{val.id}}"
+                    (change)="onIndustryChange($event)">
+                    <label class="form-check-label d-flex" for="industry{{val.id}}">{{val.name}}</label>
+                  </div>
+                  <!-- End Checkboxes -->
+                </div>
+              </div>
+
+              <div class="mb-5">
+                <h5 class="mb-3">Exchange</h5>
+
+                <div class="d-grid gap-2">
+                  <!-- Checkboxes -->
+                  <div class="form-check"  *ngFor="let e of exchanges; let i=index">
+                    <input class="form-check-input" type="checkbox" value="{{e.code}}" formArrayName="selectedExchanges" id="exchanges{{e.id}}"
+                    (change)="onExchangeChange($event)">
+                    <label class="form-check-label d-flex" for="exchanges{{e.id}}">{{e.name}}</label>
+                  </div>
+                  <!-- End Checkboxes -->
+                </div>
+              </div>              
+
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-transition">Submit</button>
+              </div>
+            </form>
+            <!-- End Form -->
+          </div>
+        </div>
+        <!-- End Navbar Collapse -->
+      </div>
+      <!-- End Navbar -->
+    </div>
+    <!-- End Col -->
+
+    <div class="col-lg-9">
+      <div class="row align-items-center mb-5">
+        <div class="col-sm mb-3 mb-sm-0">
+          <!-- <h3 class="mb-0">90 jobs for <span class="fw-normal">UK</span></h3> -->
+        </div>
+
+        <div class="col-sm-auto">
+          <div class="d-sm-flex justify-content-sm-end align-items-center">
+            <!-- Select -->
+            <div class="mb-2 mb-sm-0 me-sm-2">
+              <select class="form-select form-select-sm">
+                <option value="Relevance" selected>Relevance</option>
+                <option value="mostRecent">Most recent</option>
+              </select>
+            </div>
+            <!-- End Select -->
+
+            <!-- Select -->
+            <div class="mb-2 mb-sm-0 me-sm-2">
+              <select class="form-select form-select-sm">
+                <option value="alphabeticalOrderSelect1" selected>A-to-Z</option>
+                <option value="alphabeticalOrderSelect2">Z-to-A</option>
+              </select>
+            </div>
+            <!-- End Select -->
+
+            <!-- Nav -->
+            <ul class="nav nav-segment">
+              <li class="nav-item">
+                <a type="button" [ngClass]="isGridOpen == true ? 'nav-link active' : 'nav-link'" (click)="openGrid()">
+                  <fa-icon [icon]="faTh"></fa-icon>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a type="button" [ngClass]="isListOpen == true ? 'nav-link active' : 'nav-link'" (click)="closeGrid()">
+                  <fa-icon [icon]="faThList"></fa-icon>
+                </a>
+              </li>
+            </ul>
+            <!-- End Nav -->
+          </div>
+        </div>
+      </div>
+      <!-- End Row -->
+
+      <div class="row row-cols-1 row-cols-sm-2 mb-5" *ngIf="isGridOpen">
+
+        <div class="col mb-5" *ngFor="let item of news">
+          <!-- Card -->
+          <app-news-cards [uuid]="item.uuid" [title]="item.title" [description]="item.description"
+            [keywords]="item.keywords" [snippet]="item.snippet" [image_url]="item.image_url" [url]="item.url"
+            [published_at]="item.published_at"></app-news-cards>
+          <!-- End Card -->
+        </div>
+        <!-- End Col -->
+
+        <div class="col mb-5" *ngFor="let item of news2">
+          <!-- Card -->
+          <app-news-cards [uuid]="item.uuid" [title]="item.title" [description]="item.description"
+            [keywords]="item.keywords" [snippet]="item.snippet" [image_url]="item.image_url" [url]="item.url"
+            [published_at]="item.published_at"></app-news-cards>
+          <!-- End Card -->
+        </div>
+        <!-- End Col -->
+
+        <div class="col mb-5" *ngFor="let item of news3">
+          <!-- Card -->
+          <app-news-cards [uuid]="item.uuid" [title]="item.title" [description]="item.description"
+            [keywords]="item.keywords" [snippet]="item.snippet" [image_url]="item.image_url" [url]="item.url"
+            [published_at]="item.published_at"></app-news-cards>
+          <!-- End Card -->
+        </div>
+        <!-- End Col -->
+
+      </div>
+      <!-- End Row -->
+
+      
+        <div class="d-grid gap-7 mb-7" *ngIf="isListOpen">
+          <!-- Card -->
+          <div class="card card-flush " *ngFor="let item of news">
+            <app-news-list
+            [uuid]="item.uuid" [title]="item.title" [description]="item.description"
+            [keywords]="item.keywords" [snippet]="item.snippet" [image_url]="item.image_url" [url]="item.url"
+            [published_at]="item.published_at" [industry]="item.entities[0]?.industry">
+            </app-news-list>
+          </div>
+          <!-- End Card -->  
+           <!-- Card -->
+           <div class="card card-flush " *ngFor="let item of news2">
+            <app-news-list
+            [uuid]="item.uuid" [title]="item.title" [description]="item.description"
+            [keywords]="item.keywords" [snippet]="item.snippet" [image_url]="item.image_url" [url]="item.url"
+            [published_at]="item.published_at" [industry]="item.entities[0]?.industry">
+            </app-news-list>
+          </div>
+          <!-- End Card -->           
+            <!-- Card -->
+            <div class="card card-flush " *ngFor="let item of news3">
+              <app-news-list
+              [uuid]="item.uuid" [title]="item.title" [description]="item.description"
+              [keywords]="item.keywords" [snippet]="item.snippet" [image_url]="item.image_url" [url]="item.url"
+              [published_at]="item.published_at" [industry]="item.entities[0]?.industry">
+              </app-news-list>
+            </div>
+            <!-- End Card -->   
+      </div>
+
+      <!-- Pagination -->
+      <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">
+                <i class="bi-chevron-double-left small"></i>
+              </span>
+            </a>
+          </li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+          <li class="page-item"><a class="page-link" href="#">5</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">
+                <i class="bi-chevron-double-right small"></i>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- End Pagination -->
+    </div>
+    <!-- End Col -->
+  </div>
+  <!-- End Row -->
+</div>

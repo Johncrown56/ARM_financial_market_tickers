@@ -1,0 +1,45 @@
+    <!-- Card -->
+    <div class="card h-100">
+      <div class="shape-container">
+        <img class="card-img-top" src="{{image_url}}" alt="Image Description">
+        
+        <!-- Shape -->
+        <div class="shape shape-bottom zi-1" style="margin-bottom: -.25rem">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1920 100.1">
+            <path fill="#fff" d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"></path>
+          </svg>
+        </div>
+        <!-- End Shape -->
+      </div>
+
+      <!-- Card Body -->
+      <div class="card-body">
+        <h3 class="card-title">
+          <a class="text-dark" href="{{url}}" target="_blank">{{title}}</a>
+        </h3>
+
+        <p class="card-text">{{snippet}}</p>
+
+        <a class="btn btn-primary btn-transition" href="{{url}}">Read article <fa-icon [icon]="faAngleRight"></fa-icon></a>
+      </div>
+      <!-- End Card Body -->
+
+      <!-- Card Footer -->
+      <div class="card-footer">
+        <div class="d-flex align-items-center">
+          <div class="flex-shrink-0 avatar-group avatar-group-xs">
+            <a class="avatar avatar-xs avatar-circle" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Author">
+              <img class="avatar-img" src="./assets/img/160x160/john.png" alt="Image Description">
+            </a>
+          </div>
+
+          <div class="flex-grow-1">
+            <div class="d-flex justify-content-end">
+              <p class="card-text">{{published_at | date:'mediumDate' }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Card Footer -->
+    </div>
+    <!-- End Card -->
